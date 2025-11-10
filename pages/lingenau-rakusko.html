@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Ekologický NED rodinný dom LINGENAU (Rakúsko) - HolzHaus s.r.o.</title>
+    <meta name="description" content="Nízkoenergetický rodinný dom v LINGENAU, Rakúsko - difúzne otvorená konštrukcia s tepelnou izoláciou U = 0,134 W/m²K. Úžitková plocha 254,31 m².">
+    <meta name="keywords" content="LINGENAU, Rakúsko, nízkoenergetický dom, drevostavba, difúzne otvorená konštrukcia, HolzHaus">
+    <meta name="author" content="HolzHaus s.r.o.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://holz-haus.sk/lingenau-rakusko.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../sources/FAVICON.png">
+    <link rel="apple-touch-icon" href="../sources/FAVICON.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://holz-haus.sk/lingenau-rakusko.html">
+    <meta property="og:title" content="Ekologický NED rodinný dom LINGENAU (Rakúsko) - HolzHaus s.r.o.">
+    <meta property="og:description" content="Nízkoenergetický rodinný dom v LINGENAU s difúzne otvorenou konštrukciou.">
+    <meta property="og:image" content="https://holz-haus.sk/sources/Ekologicky-NED-rodinny-dom-LINGENAU-Rakusko/unnamed-2.jpg">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/pages/project-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Lenis Smooth Scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+</head>
+<body>
+    <!-- Header will be inserted here by JS -->
+    <div id="header-container"></div>
+
+    <!-- Project Detail Container -->
+    <section class="project-detail-container">
+        <!-- Left Sidebar - Project Info -->
+        <div class="project-info-sidebar">
+            <div class="project-info-content">
+                <span class="project-accent-line"></span>
+                <h1 class="project-title">Ekologický NED rodinný dom LINGENAU (Rakúsko)</h1>
+                <span class="project-date">26. apríla 2020</span>
+                
+                <div class="project-description">
+                    <p>Nízkoenergetický variant difúzne otvorená konštrukcia, súčiniteľ prechodu tepla konštrukcie: U = 0,134 W/m²K, hr. 396 mm</p>
+                    
+                    <p>Na základe projektu bola podľa Energetického kritéria stanovená merná ročná spotreba tepla na vykurovanie 41,74 KWh/m²/rok</p>
+                    
+                    <p><strong>Strecha a strešná krytina:</strong> Drevený tesársky krov z BSH hranolov 120×240 mm, strešná betónová krytina zn. Bramac Klasic Protector, hladká povrchová úprava s dvojitým nástrekom disperznou farbou Protector</p>
+                    
+                    <p><strong>Fasáda:</strong> Odvetraná drevená fasáda z hobľovaných dosiek zo sibírskeho smrekovca Hasslacher 19 mm, drevovláknitá tepelná izolácia STEICO P+D, hr. 60 mm, (súčiniteľ tepelnej vodivosti λD 0,042 W.m⁻¹.K⁻¹)</p>
+                    
+                    <p><strong>Okenné konštrukcie:</strong> Drevené okná a dvere SLOWINSCY IV 92 Thermo, profilový systém ID 5000 s vlepeným sklom – izolačné trojsklo Planibel TOP N+,AGC , Uokna = 1,0W/m² v kombinácii s hliníkovými dverné konštrukciami SLOVAKTUAL Heroal W 70 HI – s najvyšším stupňom izolácie, index prestupu tepla Uw od 0,72 W/(m²K), sklo Ug=0,5 W/m²K (4-18-4-18-4 mm)</p>
+                    
+                    
+                </div>
+                
+                <a href="referencie.html" class="back-to-gallery">
+                    ← Späť na referencie
+                </a>
+            </div>
+        </div>
+        
+        <!-- Right Content - Photo Gallery -->
+        <div class="project-gallery-content">
+            <div class="project-gallery-grid" id="gallery-grid">
+                <!-- Photos will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <button class="modal-nav modal-prev" onclick="prevImage()">‹</button>
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <button class="modal-nav modal-next" onclick="nextImage()">›</button>
+        </div>
+    </div>
+
+    <!-- Footer will be inserted here by JS -->
+    <div id="footer-container"></div>
+
+    <!-- JS Components -->
+    <script type="module" src="../js/main.js"></script>
+    
+    <!-- Fallback for browsers without module support -->
+    <script nomodule src="../js/fallback-components.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Project Gallery Script -->
+    <script>
+        // Gallery state
+        let currentImageIndex = 0;
+        let galleryImages = [];
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lenis smooth scrolling
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                mouseMultiplier: 1,
+                smoothTouch: false,
+                touchMultiplier: 2,
+                infinite: false,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+            
+            // Project images
+            const projectFolder = 'Ekologicky-NED-rodinny-dom-LINGENAU-Rakusko';
+            const images = [
+                '20190618_142040.jpg',
+                '20190618_150948.jpg',
+                '20190618_165548.jpg',
+                '20190624_073318.jpg',
+                '20190704_084051.jpg',
+                'IMG_20200124_104423.jpg',
+                'unnamed-2.jpg'
+            ];
+            
+            loadGallery(images, projectFolder);
+        });
+        
+        function loadGallery(images, folder) {
+            const galleryGrid = document.getElementById('gallery-grid');
+            galleryImages = images.map(img => `../sources/${folder}/${img}`);
+            
+            images.forEach((image, index) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'project-gallery-item';
+                galleryItem.onclick = () => openModal(index);
+                
+                const img = document.createElement('img');
+                img.src = `../sources/${folder}/${image}`;
+                img.alt = `${folder} - ${index + 1}`;
+                img.loading = 'lazy';
+                
+                galleryItem.appendChild(img);
+                galleryGrid.appendChild(galleryItem);
+            });
+        }
+        
+        function openModal(index) {
+            currentImageIndex = index;
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalImage.src = galleryImages[index];
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            document.getElementById('modalImage').src = galleryImages[currentImageIndex];
+        }
+        
+        function prevImage() {
+            currentImageIndex = currentImageIndex === 0 ? galleryImages.length - 1 : currentImageIndex - 1;
+            document.getElementById('modalImage').src = galleryImages[currentImageIndex];
+        }
+        
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+        
+        // Close modal when clicking outside image
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+        
+        // Initialize components directly if modules don't load
+        setTimeout(function() {
+            if (!document.querySelector('.navbar-transparent')) {
+                console.log('Modules did not load, trying fallback...');
+                if (typeof initFallbackComponents === 'function') {
+                    initFallbackComponents();
+                } else {
+                    // Load fallback script if not already loaded
+                    var script = document.createElement('script');
+                    script.src = '../js/fallback-components.js';
+                    script.onload = function() {
+                        if (typeof initFallbackComponents === 'function') {
+                            initFallbackComponents();
+                        }
+                    };
+                    document.head.appendChild(script);
+                }
+            }
+        }, 100);
+    </script>
+</body>
+</html>

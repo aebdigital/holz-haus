@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>HolzHaus s.r.o. - Ekologické drevostavby a pasívne domy | Detva</title>
+    <meta name="description" content="HolzHaus s.r.o. - ekologické drevostavby a pasívne domy. Stavame kvalitne, ekologicky a energeticky úsporne s dôrazom na prírodné materiály a zdravé bývanie.">
+    <meta name="keywords" content="drevostavby, pasívne domy, nízkoenergetické domy, ekologické stavby, HolzHaus, Detva, drevo, energeticky úsporné bývanie">
+    <meta name="author" content="HolzHaus s.r.o.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://holz-haus.sk/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="sources/FAVICON.png">
+    <link rel="apple-touch-icon" href="sources/FAVICON.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://holz-haus.sk/">
+    <meta property="og:title" content="HolzHaus s.r.o. - Ekologické drevostavby a pasívne domy">
+    <meta property="og:description" content="Ekologické drevostavby a pasívne domy s dôrazom na prírodné materiály a zdravé bývanie.">
+    <meta property="og:image" content="https://geostavdetva.sk/sources/slider-home-01o.jpg">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:site_name" content="HolzHaus s.r.o.">
+    
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/hero.css">
+    <link rel="stylesheet" href="css/components/process-steps.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Lenis Smooth Scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+</head>
+<body>
+    <!-- Header will be inserted here by JS -->
+    <div id="header-container"></div>
+    
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Hero Background -->
+        <div class="hero-background">
+            <img src="sources/1B9A6411.jpg" alt="HolzHaus drevostavby 1" class="hero-bg-image active">
+            <img src="sources/IMG_0434a.jpg" alt="HolzHaus drevostavby 2" class="hero-bg-image">
+            <img src="sources/DSC_4695.jpg" alt="HolzHaus drevostavby 3" class="hero-bg-image">
+        </div>
+        
+        <!-- Hero Floating Features -->
+        <div class="hero-features">
+            <div class="hero-feature hero-feature-top-left">
+                <span class="feature-text">Ekologické drevo</span>
+                <div class="feature-arrow">
+                    <svg width="30" height="30" viewBox="0 0 94.9 100.8" xmlns="http://www.w3.org/2000/svg">
+                        <path class="st0" d="M19.9,92c5.6-1.9,10.9-4.3,16.1-7c4.9-2.3,9.6-5,14.2-7.8c4.3-2.6,7.9-6.2,10.7-10.4c2.5-4.1,4.2-8.7,5-13.5c1.1-6,0.9-12,1-18c0-0.8-0.3-1.5-0.9-2c-0.5-0.3-1.1-0.2-1.1,0.5c-0.1,10,0.1,20.3-4.9,29.4S45.2,76.9,36.3,81.5c-5.6,3-11.5,5.6-17.6,7.7C17.6,89.6,18.7,92.3,19.9,92" fill="white"/>
+                        <path class="st0" d="M57.1,35.9c6.1-1.7,12.5-2.4,18.8-2c0.9,0,0.6-1.3,0.4-1.8c-3-8.1-7.1-15.7-12.1-22.7c-0.4-0.6-1.5-1.2-1.9-0.4c-4.2,7.8-7.5,16.1-9.8,24.7C52.2,34.6,56.2,36.2,57.1,35.9" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="hero-feature hero-feature-top-right">
+                <span class="feature-text">Pasívny štandard</span>
+                <div class="feature-arrow">
+                    <svg width="30" height="30" viewBox="0 0 94.9 100.8" xmlns="http://www.w3.org/2000/svg">
+                        <path class="st0" d="M19.9,92c5.6-1.9,10.9-4.3,16.1-7c4.9-2.3,9.6-5,14.2-7.8c4.3-2.6,7.9-6.2,10.7-10.4c2.5-4.1,4.2-8.7,5-13.5c1.1-6,0.9-12,1-18c0-0.8-0.3-1.5-0.9-2c-0.5-0.3-1.1-0.2-1.1,0.5c-0.1,10,0.1,20.3-4.9,29.4S45.2,76.9,36.3,81.5c-5.6,3-11.5,5.6-17.6,7.7C17.6,89.6,18.7,92.3,19.9,92" fill="white"/>
+                        <path class="st0" d="M57.1,35.9c6.1-1.7,12.5-2.4,18.8-2c0.9,0,0.6-1.3,0.4-1.8c-3-8.1-7.1-15.7-12.1-22.7c-0.4-0.6-1.5-1.2-1.9-0.4c-4.2,7.8-7.5,16.1-9.8,24.7C52.2,34.6,56.2,36.2,57.1,35.9" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="hero-feature hero-feature-bottom-left">
+                <span class="feature-text">Zdravé bývanie</span>
+                <div class="feature-arrow">
+                    <svg width="30" height="30" viewBox="0 0 94.9 100.8" xmlns="http://www.w3.org/2000/svg">
+                        <path class="st0" d="M19.9,92c5.6-1.9,10.9-4.3,16.1-7c4.9-2.3,9.6-5,14.2-7.8c4.3-2.6,7.9-6.2,10.7-10.4c2.5-4.1,4.2-8.7,5-13.5c1.1-6,0.9-12,1-18c0-0.8-0.3-1.5-0.9-2c-0.5-0.3-1.1-0.2-1.1,0.5c-0.1,10,0.1,20.3-4.9,29.4S45.2,76.9,36.3,81.5c-5.6,3-11.5,5.6-17.6,7.7C17.6,89.6,18.7,92.3,19.9,92" fill="white"/>
+                        <path class="st0" d="M57.1,35.9c6.1-1.7,12.5-2.4,18.8-2c0.9,0,0.6-1.3,0.4-1.8c-3-8.1-7.1-15.7-12.1-22.7c-0.4-0.6-1.5-1.2-1.9-0.4c-4.2,7.8-7.5,16.1-9.8,24.7C52.2,34.6,56.2,36.2,57.1,35.9" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="hero-feature hero-feature-bottom-right">
+                <span class="feature-text">Moderná architektúra</span>
+                <div class="feature-arrow">
+                    <svg width="30" height="30" viewBox="0 0 94.9 100.8" xmlns="http://www.w3.org/2000/svg">
+                        <path class="st0" d="M19.9,92c5.6-1.9,10.9-4.3,16.1-7c4.9-2.3,9.6-5,14.2-7.8c4.3-2.6,7.9-6.2,10.7-10.4c2.5-4.1,4.2-8.7,5-13.5c1.1-6,0.9-12,1-18c0-0.8-0.3-1.5-0.9-2c-0.5-0.3-1.1-0.2-1.1,0.5c-0.1,10,0.1,20.3-4.9,29.4S45.2,76.9,36.3,81.5c-5.6,3-11.5,5.6-17.6,7.7C17.6,89.6,18.7,92.3,19.9,92" fill="white"/>
+                        <path class="st0" d="M57.1,35.9c6.1-1.7,12.5-2.4,18.8-2c0.9,0,0.6-1.3,0.4-1.8c-3-8.1-7.1-15.7-12.1-22.7c-0.4-0.6-1.5-1.2-1.9-0.4c-4.2,7.8-7.5,16.1-9.8,24.7C52.2,34.6,56.2,36.2,57.1,35.9" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">HolzHaus s.r.o.</h1>
+                <p class="hero-subtitle">
+                    Chceme žiť inak. Jednoduchšie a zdravšie. Stavame kvalitné, ekologické pasívne a nízkoenergetické drevostavby, ktoré budú slúžiť po niekoľko generácií.
+                </p>
+                <div class="hero-actions">
+                    <a href="pages/referencie.html" class="cta-btn primary">REFERENCIE</a>
+                    <a href="#services" class="cta-btn secondary">NAŠE SLUŽBY</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-subtitle">— Jedna myšlienka tvorí predstavu</div>
+            <h2 class="about-title-centered">Ekologický dom – inak, jednoduchšie, zdravšie</h2>
+            
+            <div class="about-simple-grid">
+                <div class="about-text-content">
+                    <p>Každý z nás sa pohráva s myšlienkou zaobstarať si vlastné bývanie, ktoré bude spĺňať parametre plnohodnotného rodinného domu, bude energeticky úsporné, ekologické, kvalitné a navyše lacné.</p>
+                    
+                    <p><strong>Naša hlavná myšlienka „Chceme žiť inak. Jednoduchšie a zdravšie."</strong></p>
+                    
+                    <p>Spôsob realizácie v energeticky pasívnom štandarde s maximálne možným využitím obnoviteľných prírodných materiálov (drevo, slama, hlina, nepálená tehla) sa javí ako jediná logická cesta, ktorá zaručuje minimálne prevádzkové náklady budúceho ekologického bývania.</p>
+                    
+                    <p><strong>Firma HolzHaus dôsledné a účelové vízie moderných stavieb:</strong></p>
+                    
+                    <p>Vývoj nových ekologických materiálov sledujeme otvorene aj kriticky. Pasívne domy nie sú ovplyvnené krátkodobými architektonickými štýlmi. Naše domy sú orientované na životné prostredie a individuálne potreby našich klientov. Zároveň sa však snažíme vytvoriť priestor, v ktorom sa človek cíti jednoducho dobre a každý deň sa teší na návrat. Sme presvedčení, že ak človek trávi čas v príjemnom a zdravom prostredí, ovplyvní to pozitívne fyzické zdravie a duševnú pohodu.</p>
+                    
+                    <p><strong>Popri architektúre je pre nás najvyššou prioritou ekologické a trvácne prevedenie projektu. Drevo ako stavebný materiál ponúka rôzne výhody: masívne drevo má nielen veľmi dobrú CO2 bilanciu, k tomu je tiež funkčné a všestranne použiteľné.</strong></p>
+                </div>
+                
+                <div class="about-photo-single">
+                    <img src="sources/pretty.jpg" alt="HolzHaus drevostavby" class="about-single-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Výhody drevostavieb Section -->
+    <section class="vyhody-drevostavieb">
+        <div class="container">
+            <div class="vyhody-header">
+                <div class="vyhody-subtitle">— Prečo drevo</div>
+                <h2 class="section-title">Výhody drevostavieb</h2>
+            </div>
+            
+            <div class="vyhody-grid">
+                <div class="vyhoda-item">
+                    <div class="vyhoda-icon"><img src="sources/vyhody/prirodzene-priedusny.png" alt="Prirodzene priedušný"></div>
+                    <h3>Prirodzene priedušný</h3>
+                    <p>Použitie dreva umožňuje zhotovenie difúzne otvorených konštrukcií.</p>
+                </div>
+                
+                <div class="vyhoda-item">
+                    <div class="vyhoda-icon"><img src="sources/vyhody/ziadna-chemicka-uprava.png" alt="Žiadna chemická úprava"></div>
+                    <h3>Žiadna chemická úprava</h3>
+                    <p>Pri mechanickom sušení dreva nie je potrebná dodatočná ochrana chemickými prostriedkami.</p>
+                </div>
+                
+                <div class="vyhoda-item">
+                    <div class="vyhoda-icon"><img src="sources/vyhody/idealny-pre-recyklaciu.png" alt="Ideálne pre recykláciu"></div>
+                    <h3>Ideálne pre recykláciu</h3>
+                    <p>Drevo ako stavebný materiál je viac krát použiteľné a na konci svojho životného cyklu využiteľné ako zdroj tepelnej energie.</p>
+                </div>
+                
+                <div class="vyhoda-item">
+                    <div class="vyhoda-icon"><img src="sources/vyhody/samoregulacny.png" alt="Samoregulačný obsah vlhkosti"></div>
+                    <h3>Samoregulačný obsah vlhkosti</h3>
+                    <p>Drevo vytvára vďaka samoregulácii vlhkosti zdravé obytné priestory.</p>
+                </div>
+                
+                <div class="vyhoda-item">
+                    <div class="vyhoda-icon"><img src="sources/vyhody/vysoka-stabilita.png" alt="Vysoká stabilita"></div>
+                    <h3>Vysoká stabilita</h3>
+                    <p>Drevo má vysokú požiarnu odolnosť (rýchlosť horenia 0,7 mm za minútu). Vhodne navrhnutá drevená konštrukcia udrží statickú pevnosť pri požiari lepšie než oceľová alebo betónová.</p>
+                </div>
+                
+                <div class="vyhoda-item">
+                    <div class="vyhoda-icon"><img src="sources/vyhody/idealna-izolacia.png" alt="Ideálna izolácia"></div>
+                    <h3>Ideálna izolácia</h3>
+                    <p>Drevo uchováva tepelnú energiu dlhšie ako betónová alebo murovaná stena.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="gallery-header">
+                <div class="gallery-subtitle">— Naše realizácie</div>
+                <h2 class="section-title" data-text="Galéria">Galéria</h2>
+            </div>
+            <div class="home-gallery-grid">
+                <div class="gallery-item">
+                    <a href="pages/svedernik-slovensko.html" class="gallery-link">
+                        <div class="gallery-image-container">
+                            <img src="sources/Ekologicky-NED-Svedernik-Slovensko/IMG_20200521_082750.jpg" alt="HolzHaus - nízkoenergetické domy" loading="lazy">
+                        </div>
+                        <div class="gallery-info">
+                            <p class="gallery-category">NÍZKOENERGETICKÝ DOM</p>
+                            <h3 class="gallery-project-name">Dom Svederník</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pages/lingenau-rakusko.html" class="gallery-link">
+                        <div class="gallery-image-container">
+                            <img src="sources/Ekologicky-NED-rodinny-dom-LINGENAU-Rakusko/unnamed-2.jpg" alt="HolzHaus - pasívne domy" loading="lazy">
+                        </div>
+                        <div class="gallery-info">
+                            <p class="gallery-category">PASÍVNY DOM</p>
+                            <h3 class="gallery-project-name">Dom LINGENAU</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="pages/referencie.html" class="gallery-link">
+                        <div class="gallery-image-container">
+                            <img src="sources/NED-Detva-cast-Piest-II/DSC_4695.jpg" alt="HolzHaus - ekologické drevostavby" loading="lazy">
+                        </div>
+                        <div class="gallery-info">
+                            <p class="gallery-category">DREVOSTAVBA</p>
+                            <h3 class="gallery-project-name">Dom Detva</h3>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item gallery-all-projects">
+                    <a href="pages/referencie.html" class="gallery-all-link">
+                        <div class="gallery-all-content">
+                            <h3>Všetky projekty</h3>
+                            <div class="gallery-all-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+   
+
+    <!-- Process Steps Section -->
+    <section class="process-steps">
+        <div class="container">
+            <div class="process-steps-header">
+                <div class="process-steps-subtitle">— Náš proces</div>
+                <h2 class="section-title">Dom na kľúč – proces realizácie</h2>
+                <p class="process-steps-intro">Celý proces realizácie drevostavby sa dá stručne zhrnúť do šiestich procesov. Stavame domy z prírodných materiálov, ktoré sú predpoklad zdravého bývania pre niekoľko generácií.</p>
+            </div>
+            
+            <div class="process-steps-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Diskusia: Vysnívaný dom v slovách</h3>
+                    <p>Opíšte svoj cieľ a sen. Aký by mal byť život v novom domove, čo by mal mať a koľko stáť? Základom je dialóg medzi vami a nami.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Istota a skúsenosti</h3>
+                    <p>Ukážeme vám ako sú naše domy navrhnuté a postavené. Potrebujete istotu, že chcete žiť v drevenom dome od HolzHaus.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Kvalitný projekt a cenová kalkulácia</h3>
+                    <p>Vypracujeme predbežný návrh. Stanovíme priority a optimalizujeme projekt. Dostanete presné a transparentné náklady.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Moderná softvérová technológia</h3>
+                    <p>Kvalitná projektová dokumentácia v CAD programe. Rozkreslia každú súčasť do posledného dielu pre perfektné zapadnutie.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <h3>Montáž – veľký deň sa blíži</h3>
+                    <p>Začína pravá výstavba. Montáž trvá 4-6 mesiacov. Suchý proces nezávislý od počasia s garančným Blower-Door testom.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">06</div>
+                    <h3>Odovzdanie kľúčov</h3>
+                    <p>Odovzdávame kľúče, záručné listy, certifikáty materiálov a dokumentácie. Veríme, že cesta bude pozitívna skúsenosť.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be inserted here by JS -->
+    <div id="footer-container"></div>
+
+    <!-- JS Components -->
+    <script type="module" src="js/main.js"></script>
+    
+    <!-- Fallback for browsers without module support -->
+    <script nomodule src="js/fallback-components.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Initialize components directly if modules don't load -->
+    <script>
+        // Hero parallax effect
+        function initHeroParallax() {
+            const heroBackground = document.querySelector('.hero-background');
+            if (!heroBackground) return;
+            
+            function updateParallax() {
+                const scrolled = window.pageYOffset;
+                const viewportHeight = window.innerHeight;
+                const heroHeight = document.querySelector('.hero').offsetHeight;
+                
+                // Only apply parallax while hero is visible
+                if (scrolled < heroHeight) {
+                    const parallaxAmount = scrolled * 0.3; // 30% movement
+                    heroBackground.style.transform = `translateY(${parallaxAmount}px)`;
+                }
+            }
+            
+            window.addEventListener('scroll', updateParallax);
+            updateParallax(); // Initial call
+        }
+        
+        // Initialize parallax when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initHeroParallax);
+        } else {
+            initHeroParallax();
+        }
+        
+        // Check if components loaded after a short delay
+        setTimeout(function() {
+            if (!document.querySelector('.navbar-transparent')) {
+                console.log('Modules did not load, trying fallback...');
+                if (typeof initFallbackComponents === 'function') {
+                    initFallbackComponents();
+                } else {
+                    // Load fallback script if not already loaded
+                    var script = document.createElement('script');
+                    script.src = 'js/fallback-components.js';
+                    script.onload = function() {
+                        if (typeof initFallbackComponents === 'function') {
+                            initFallbackComponents();
+                        }
+                    };
+                    document.head.appendChild(script);
+                }
+            }
+        }, 100);
+    </script>
+</body>
+</html> 

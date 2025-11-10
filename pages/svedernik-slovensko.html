@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Ekologický NED Svederník (Slovensko) - HolzHaus s.r.o.</title>
+    <meta name="description" content="Nízkoenergetický rodinný dom v Svederníku - difúzne otvorená konštrukcia s tepelnou izoláciou U = 0,125 W/m²K. Úžitková plocha 125,53 m².">
+    <meta name="keywords" content="Svederník, nízkoenergetický dom, drevostavba, difúzne otvorená konštrukcia, HolzHaus">
+    <meta name="author" content="HolzHaus s.r.o.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://holz-haus.sk/svedernik-slovensko.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../sources/FAVICON.png">
+    <link rel="apple-touch-icon" href="../sources/FAVICON.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://holz-haus.sk/svedernik-slovensko.html">
+    <meta property="og:title" content="Ekologický NED Svederník (Slovensko) - HolzHaus s.r.o.">
+    <meta property="og:description" content="Nízkoenergetický rodinný dom v Svederníku s difúzne otvorenou konštrukciou.">
+    <meta property="og:image" content="https://holz-haus.sk/sources/Ekologicky-NED-Svedernik-Slovensko/IMG_20200521_082750.jpg">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/pages/project-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Lenis Smooth Scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+</head>
+<body>
+    <!-- Header will be inserted here by JS -->
+    <div id="header-container"></div>
+
+    <!-- Project Detail Container -->
+    <section class="project-detail-container">
+        <!-- Left Sidebar - Project Info -->
+        <div class="project-info-sidebar">
+            <div class="project-info-content">
+                <span class="project-accent-line"></span>
+                <h1 class="project-title">Ekologický NED Svederník (Slovensko)</h1>
+                <span class="project-date">10. mája 2020</span>
+                
+                <div class="project-description">
+                    <p>Nízkoenergetický variant difúzne otvorená konštrukcia, súčiniteľ prechodu tepla konštrukcie: U = 0,125 W/m²K, hr. 405 mm</p>
+                    
+                    <p><strong>BD test:</strong> Celkové číslo výmeny vzduchu = 0,59 h⁻¹</p>
+                    
+                    <p><strong>Strecha a strešná krytina:</strong> Drevený tesárska konštrukcia z BSH a KVH hranolov, vodorovná hydroizolácia na báze mäkčeného PVC vhodná na realizáciu mechanicky kotvených a priťažených striech Fatrafol 810, štrkový zásyp s riečneho premývaného štrku frakcie 16-22 mm</p>
+                    
+                    <p><strong>Fasáda:</strong> fasádneho systém z fasádnej drevovláknitej izolácie Steico Protect hr. 100 mm (súčiniteľ tepelnej vodivosti λD 0,036 W.m⁻¹.K⁻¹), povrch stien – silikátová omietka WEBER pas, zrnitosť 1,5 mm v kombinácii s odvetranou drevenou fasádou z hobľovaných dosák zo sibírskeho smrekovca Hasslacher</p>
+                    
+                    <p><strong>Okenné konštrukcie:</strong> dvevohliníkové konštrukcie MINTAL Profil: Classic – Energetická trieda A (Uw: 0,67 W/m²K), celoobvodového kovania od firmy Siegenia Aubi, typ Titan AF 34 s integrovanými bezpečnostnými prvkami (zvýšená bezpečnostná trieda RC – 1), Hliníkovým kapotážnym systémom ALURON, povrchová úprava ADLER</p>
+                    
+                </div>
+                
+                <a href="referencie.html" class="back-to-gallery">
+                    ← Späť na referencie
+                </a>
+            </div>
+        </div>
+        
+        <!-- Right Content - Photo Gallery -->
+        <div class="project-gallery-content">
+            <div class="project-gallery-grid" id="gallery-grid">
+                <!-- Photos will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <button class="modal-nav modal-prev" onclick="prevImage()">‹</button>
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <button class="modal-nav modal-next" onclick="nextImage()">›</button>
+        </div>
+    </div>
+
+    <!-- Footer will be inserted here by JS -->
+    <div id="footer-container"></div>
+
+    <!-- JS Components -->
+    <script type="module" src="../js/main.js"></script>
+    
+    <!-- Fallback for browsers without module support -->
+    <script nomodule src="../js/fallback-components.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Project Gallery Script -->
+    <script>
+        // Gallery state
+        let currentImageIndex = 0;
+        let galleryImages = [];
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lenis smooth scrolling
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                mouseMultiplier: 1,
+                smoothTouch: false,
+                touchMultiplier: 2,
+                infinite: false,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+            
+            // Project images
+            const projectFolder = 'Ekologicky-NED-Svedernik-Slovensko';
+            const images = [
+                '20191217_092130.jpg',
+                '20191217_143320.jpg', 
+                '20200215_091115.jpg',
+                '20200324_172321.jpg',
+                'IMG_20200310_122400.jpg',
+                'IMG_20200417_093620.jpg',
+                'IMG_20200420_103918.jpg',
+                'IMG_20200428_153708.jpg',
+                'IMG_20200521_082750.jpg'
+            ];
+            
+            loadGallery(images, projectFolder);
+        });
+        
+        function loadGallery(images, folder) {
+            const galleryGrid = document.getElementById('gallery-grid');
+            galleryImages = images.map(img => `../sources/${folder}/${img}`);
+            
+            images.forEach((image, index) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'project-gallery-item';
+                galleryItem.onclick = () => openModal(index);
+                
+                const img = document.createElement('img');
+                img.src = `../sources/${folder}/${image}`;
+                img.alt = `${folder} - ${index + 1}`;
+                img.loading = 'lazy';
+                
+                galleryItem.appendChild(img);
+                galleryGrid.appendChild(galleryItem);
+            });
+        }
+        
+        function openModal(index) {
+            currentImageIndex = index;
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalImage.src = galleryImages[index];
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            document.getElementById('modalImage').src = galleryImages[currentImageIndex];
+        }
+        
+        function prevImage() {
+            currentImageIndex = currentImageIndex === 0 ? galleryImages.length - 1 : currentImageIndex - 1;
+            document.getElementById('modalImage').src = galleryImages[currentImageIndex];
+        }
+        
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+        
+        // Close modal when clicking outside image
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+        
+        // Initialize components directly if modules don't load
+        setTimeout(function() {
+            if (!document.querySelector('.navbar-transparent')) {
+                console.log('Modules did not load, trying fallback...');
+                if (typeof initFallbackComponents === 'function') {
+                    initFallbackComponents();
+                } else {
+                    // Load fallback script if not already loaded
+                    var script = document.createElement('script');
+                    script.src = '../js/fallback-components.js';
+                    script.onload = function() {
+                        if (typeof initFallbackComponents === 'function') {
+                            initFallbackComponents();
+                        }
+                    };
+                    document.head.appendChild(script);
+                }
+            }
+        }, 100);
+    </script>
+</body>
+</html>
