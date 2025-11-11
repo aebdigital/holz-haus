@@ -46,10 +46,10 @@
 
 .about-simple-content h3 {
     font-family: var(--font-primary);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--primary-dark);
-    margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
+    margin: 20px 0 var(--spacing-lg) 0;
 }
 
 .about-simple-content ul {
