@@ -219,6 +219,11 @@ ul {
     margin-bottom: 20px;
 }
 
+/* Fix navigation ul margin override */
+.nav-menu {
+    margin-bottom: 0;
+}
+
 
 .about-text p:first-child {
     font-size: 16px;
